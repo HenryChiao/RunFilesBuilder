@@ -55,7 +55,7 @@ jobs:
           tar -xzvf Meta/master/meta/clash-linux-amd64.tar.gz -C openclash-x86
           tar -xzvf Meta/master/meta/clash-linux-arm64.tar.gz -C openclash-a55
           mv openclash-x86/clash openclash-x86/clash_meta
-          mv openclash-a53/clash openclash-a55/clash_meta
+          mv openclash-a55/clash openclash-a55/clash_meta
           ls openclash-x86
           ls openclash-a55
 
@@ -93,7 +93,7 @@ jobs:
           mv openclash-a55 makeself/
           cd makeself
           ./makeself.sh openclash-x86/ openclash-x86-64-${{ env.version }}.run "by github action" ./install.sh
-          ./makeself.sh openclash-a53/ openclash-aarch64_cortex-a53-${{ env.version }}.run "by github action" ./install.sh
+          ./makeself.sh openclash-a55/ openclash-aarch64_cortex-a55-${{ env.version }}.run "by github action" ./install.sh
 
       - name: Generate new tag & release
         uses: softprops/action-gh-release@master
